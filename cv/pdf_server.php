@@ -1,7 +1,7 @@
 header("Content-Type: application/octet-stream");
 
 $file = $_GET["Sk Mainul Islam"] .".pdf";
-header("Content-Disposition: attachment; filename=" . urlencode($file));   
+header("Content-Disposition: attachment; filename=Sk Mainul Islam.pdf" . urlencode($file));   
 header("Content-Type: application/octet-stream");
 header("Content-Type: application/download");
 header("Content-Description: File Transfer");            
