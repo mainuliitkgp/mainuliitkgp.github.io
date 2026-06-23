@@ -1,144 +1,439 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <title>Sk Mainul Islam</title>
-
-  <meta name="author" content="Sk Mainul Islam">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sk Mainul Islam — PhD Researcher, NLP & Interpretability</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    :root {
+      --ink: #1a1a1a;
+      --ink-muted: #555;
+      --ink-faint: #888;
+      --surface: #fff;
+      --surface-2: #f7f6f2;
+      --surface-3: #efede7;
+      --accent: #1a4fa3;
+      --accent-warm: #c05a00;
+      --rule: #ddd;
+      --tag-bg: #e8edf7;
+      --tag-text: #1a3d7a;
+      --radius: 3px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--surface);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Header ──────────────────────────────────── */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 2.5rem;
+      align-items: start;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 2.5rem;
+    }
+
+    .name {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .title-line {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      font-size: 14.5px;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .bio a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .bio a:hover { border-color: var(--accent); }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1rem;
+      align-items: center;
+    }
+
+    .contact-row a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .contact-row a:hover { border-color: var(--accent); }
+    .contact-row .sep { color: var(--rule); font-size: 13px; }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--surface-3);
+      display: block;
+      margin-top: 0.3rem;
+    }
+
+    /* ── Section ─────────────────────────────────── */
+    section { margin-bottom: 2.5rem; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-warm);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+
+    p { margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Research interests ──────────────────────── */
+    .interests-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 2px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Highlights ──────────────────────────────── */
+    .timeline {
+      list-style: none;
+      border-left: 2px solid var(--surface-3);
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline li {
+      position: relative;
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -1.38rem;
+      top: 0.45em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .timeline li a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .timeline li a:hover { border-color: var(--accent); }
+
+    .date-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink-faint);
+      margin-right: 0.35rem;
+    }
+
+    /* ── Publications ────────────────────────────── */
+    .pub {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .pub:first-of-type { border-top: 1px solid var(--rule); }
+
+    .pub-thumb {
+      width: 80px;
+      height: 58px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--rule);
+      background: var(--surface-2);
+    }
+
+    .pub-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      line-height: 1.4;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .pub-title:hover { color: var(--accent); }
+
+    .pub-authors {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 0.2rem;
+    }
+    .pub-authors strong { color: var(--ink); font-weight: 600; }
+
+    .pub-venue {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--accent-warm);
+    }
+
+    .pub-abstract {
+      font-size: 13px;
+      color: var(--ink-faint);
+      line-height: 1.65;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Links row ───────────────────────────────── */
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.2rem;
+      margin-top: 0.75rem;
+    }
+    .links-row a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .links-row a:hover { border-color: var(--accent); }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 12px;
+      color: var(--ink-faint);
+      text-align: right;
+    }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 560px) {
+      .header { grid-template-columns: 1fr; }
+      .photo { width: 90px; height: 90px; order: -1; }
+      .pub { grid-template-columns: 1fr; }
+      .pub-thumb { display: none; }
+      body { padding: 2rem 1.25rem 5rem; }
+    }
+  </style>
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Sekh(Sk) Mainul Islam</name>
-              </p>
-              <p>I am a second-year PhD student at the <a href=https://www.copenlu.com/>CopeNLU</a> group, <a href=https://www.ku.dk/en>University of Copenhagen</a>, Denmark, supervised by Prof. <a href=https://isabelleaugenstein.github.io/>Isabelle Augenstein</a> and <a href=https://apepa.github.io/>Pepa Atanasova</a>. Currently, I am working on explainability in fact-checking and on improving the robustness and trustworthiness of NLP models. Prior to that, I was a Research Engineer at the <a href=https://sites.nyuad.nyu.edu/ccs-ad/> Center for Cyber Security </a>, <a href=https://nyuad.nyu.edu/en/>New York University, Abu Dhabi</a> since November 2022. <br>I completed my MS by Research at the <a href=https://cse.iitkgp.ac.in/>Department of Computer Science & Engineering</a>, Indian Institute of Technology, Kharagpur (<a href=http://www.iitkgp.ac.in/>IIT Kharagpur</a>), from January 2019 to September 2022. My master's thesis was on developing a scalable and explainable approach to aspect knowledge information incorporation into the Aspect Based Sentiment Analysis task [<a href=https://drive.google.com/file/d/1Z1ClsJ2urIEBScLDBU1AL_1ffX0szRvL/view?usp=sharing> PDF</a>]. I completed my undergraduate studies in Computer Science & Engineering from <a href=https://makautwb.ac.in/>Maulana Abul Kalam Azad University of Technology</a>, Kolkata, in July 2018. 
-           
-     
-              </p>
 
-               <p style="text-align:center">
-                <a href="mailto:si2307@nyu.edu">Email</a> &nbsp/&nbsp
-                 <a href="https://twitter.com/SKMAINULISLAM11">Twitter</a> &nbsp/&nbsp
-                 <a href="https://www.linkedin.com/in/skmainul/">LinkedIn</a> &nbsp/&nbsp
-                 <!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mainulislam79/60min'});return false;">Schedule time with me</a>
-<!-- Calendly link widget end -->
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/profile_pic_2.jpeg"><img style="width:90%;max-width:90%" alt="profile photo" src="images/profile_pic_2.jpeg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
+  <!-- ── Header ──────────────────────────────────── -->
+  <header class="header">
+    <div>
+      <div class="name">Sk Mainul Islam</div>
+      <div class="title-line">PhD Fellow · NLP &amp; Interpretability · Copenhagen</div>
+      <p class="bio">
+        I am a second-year PhD fellow at the <a href="https://www.copenlu.com/">CopeNLU group</a>,
+        <a href="https://www.ku.dk/en">University of Copenhagen</a>, supervised by
+        Prof. <a href="https://isabelleaugenstein.github.io/">Isabelle Augenstein</a> and
+        Asst. Prof. <a href="https://apepa.github.io/">Pepa Atanasova</a>.
+        My research sits at the intersection of <em>explainability</em>, <em>fact-checking</em>,
+        and <em>robustness</em> in large language models — with a particular focus on
+        interpretable reasoning for misinformation detection and trustworthy NLP systems.
+      </p>
+      <p class="bio">
+        Before Copenhagen, I was a Research Engineer at the
+        <a href="https://sites.nyuad.nyu.edu/ccs-ad/">Center for Cyber Security</a>,
+        <a href="https://nyuad.nyu.edu/en/">NYU Abu Dhabi</a> (2022–2024).
+        I hold an MS by Research from
+        <a href="https://cse.iitkgp.ac.in/">IIT Kharagpur</a>,
+        where my thesis developed scalable, explainable methods for Aspect-Based Sentiment Analysis.
+      </p>
+      <p class="bio">
+        I am open to <strong>academic visiting positions</strong> and
+        <strong>research scientist internships</strong> in industry for 2025.
+      </p>
+      <nav class="contact-row" aria-label="Contact and profiles">
+        <a href="mailto:si2307@nyu.edu">Email</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://drive.google.com/file/d/1flZ0RNUMV66IDJgtoOEjRC1MBxtOF0VY/view?usp=sharing">CV</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://scholar.google.com/citations?user=m0WSSSYAAAAJ&hl=en">Google Scholar</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://github.com/mainuliitkgp">GitHub</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/skmainul/">LinkedIn</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://twitter.com/SKMAINULISLAM11">Twitter / X</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://www.semanticscholar.org/author/Sk-Mainul-Islam/2150050941">Semantic Scholar</a>
+      </nav>
+    </div>
+    <div>
+      <img class="photo" src="images/profile_pic_2.jpeg" alt="Portrait of Sk Mainul Islam">
+    </div>
+  </header>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading> Research </heading>
-              <p>
-                My research interests include robustness, generalizability and interpretability of deep neural models, understanding capabilities of LLMs through knowledge probing and understanding mechanisms behind in-context-learning and constrained text generation. I aim to explore LLMs' generalization capabilities on out-of-distribution data, focusing on longer and compositional proof reasoning and understanding the in-context learning mechanism. Despite significant progress in LLMs, challenges persist in multimodal language modelling, knowledge probing, and maintaining trustworthiness, particularly in multimodal data. Additionally, ongoing pursuits include addressing challenges in emotional response and counter-response generation against misinformation, propaganda-based misinformation generation, and adversarial training for early detection scenarios. 
-              </p>
-               <p style="text-align:center">
-               <a href="https://drive.google.com/file/d/1flZ0RNUMV66IDJgtoOEjRC1MBxtOF0VY/view?usp=sharing">CV</a> &nbsp/&nbsp
-               <a href="https://scholar.google.com/citations?user=m0WSSSYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-               <a href="https://www.semanticscholar.org/author/Sk-Mainul-Islam/2150050941">Semantic Scholar</a> &nbsp/&nbsp
-               <a href="https://github.com/mainuliitkgp"> Github </a> 
-           </p>
-            </td>
-          </tr>
-        </tbody></table>
+  <!-- ── Research interests ──────────────────────── -->
+  <section>
+    <div class="section-label">Research</div>
+    <p style="font-size:14.5px; color:var(--ink-muted);">
+      My work focuses on making NLP models more interpretable, robust, and trustworthy —
+      especially in high-stakes scenarios like automated fact-checking and misinformation detection.
+      Current threads include understanding in-context learning mechanisms in LLMs,
+      compositional proof reasoning on out-of-distribution data, knowledge probing,
+      and constrained/controlled text generation for counter-narrative and emotional response tasks.
+    </p>
+    <div class="interests-grid">
+      <span class="tag">Interpretability &amp; Explainability</span>
+      <span class="tag">Fact-checking</span>
+      <span class="tag">Robustness of LLMs</span>
+      <span class="tag">In-context learning</span>
+      <span class="tag">Knowledge probing</span>
+      <span class="tag">Misinformation &amp; propaganda</span>
+      <span class="tag">Constrained text generation</span>
+      <span class="tag">Multimodal NLP</span>
+      <span class="tag">Aspect-based sentiment analysis</span>
+    </div>
+  </section>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Highlights</heading>
-              <ul>
-                 <li> September 2024: Joined <a href=https://www.copenlu.com/>CopeNLU Group</a> at the <a href=https://www.ku.dk/english/>University of Copenhagen</a> as a PhD Fellow under Prof. <a href=https://isabelleaugenstein.github.io/>Isabelle Augenstein</a> and Asst. Prof. <a href=https://apepa.github.io/>Pepa Atanasova</a>.  
-                 <li> November 2022: Joined New York University Abu Dhabi as a Research Engineer. </li>
-                 <li> Paper on Aspect Level Sentiment Classification accepted at <a href=https://www2022.thewebconf.org/> TheWebConf (formerly WWW) 2022</a>. <br>
-                 <li> Invited to be a reviewer of  <a href=https://sites.google.com/view/starsem2022> * SEM 2022 </a>.<br>
-                 <li> Paper on Fair and Controlled Text Generation accepted at <a href="https://ctrlgenworkshop.github.io//">CtrlGen Workshop</a> at NeurIPS 2021.<br>
-              <li> Started contributing at <a href="https://gem-benchmark.com/team"> GEM v2</a>.<br>
-              <li> Selected as one of the mentees at ACL Year Round Mentorship program, class of 2022 <a href="https://mentorship.aclweb.org/Home.html">ACL Mentorship</a>.<br>
-              <li> Official micro-blogger at <a href=https://2021.aclweb.org/> ACL 2021 </a>.<br>
-               <li> Selected as one of the mentees at Fatima Fellowship, class of 2021 <a href="https://sites.google.com/view/fatima-fellowship-2021/">Fatima Fellowship</a>.<br>
-              <li> Invited to be a reviewer of  <a href=https://2021.emnlp.org/> EMNLP 2021 </a>.<br>
-              <li> Served as a reviewer of  <a href=https://2021.naacl.org/> NAACL 2021 </a>.<br>
-              <li> Served as a reviewer of  <a href=https://2021.eacl.org/> EACL 2021 </a>.<br>
-              <li> Invited to be a reviewer of  <a href=https://sites.google.com/view/starsem2021> * SEM 2021 </a>.<br>
-              </ul>
-            </td>
-          </tr>
-        </tbody></table>
+  <!-- ── Highlights ──────────────────────────────── -->
+  <section>
+    <div class="section-label">News &amp; Highlights</div>
+    <ul class="timeline">
+      <li>
+        <span class="date-badge">Sep 2024</span>
+        Joined <a href="https://www.copenlu.com/">CopeNLU</a> at the University of Copenhagen as a PhD Fellow under Prof. Isabelle Augenstein and Asst. Prof. Pepa Atanasova.
+      </li>
+      <li>
+        <span class="date-badge">Nov 2022</span>
+        Joined <a href="https://nyuad.nyu.edu/en/">NYU Abu Dhabi</a> as a Research Engineer at the Center for Cyber Security.
+      </li>
+      <li>
+        <span class="date-badge">2022</span>
+        Paper on Aspect Level Sentiment Classification accepted at <a href="https://www2022.thewebconf.org/">TheWebConf (WWW) 2022</a>.
+      </li>
+      <li>
+        <span class="date-badge">2022</span>
+        Invited reviewer at <a href="https://sites.google.com/view/starsem2022">*SEM 2022</a>. Selected as ACL Year-Round Mentorship mentee (<a href="https://mentorship.aclweb.org/Home.html">class of 2022</a>).
+      </li>
+      <li>
+        <span class="date-badge">2021</span>
+        Paper on fair and controlled text generation accepted at <a href="https://ctrlgenworkshop.github.io/">CtrlGen Workshop @ NeurIPS 2021</a>.
+      </li>
+      <li>
+        <span class="date-badge">2021</span>
+        Contributing to <a href="https://gem-benchmark.com/team">GEM v2</a>. Official micro-blogger at <a href="https://2021.aclweb.org/">ACL 2021</a>.
+      </li>
+      <li>
+        <span class="date-badge">2021</span>
+        Selected as mentee at <a href="https://sites.google.com/view/fatima-fellowship-2021/">Fatima Fellowship 2021</a>. Reviewer at EMNLP 2021, NAACL 2021, EACL 2021, and *SEM 2021.
+      </li>
+    </ul>
+  </section>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-   
-   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-           <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/sysarch2.png" width="160" height="100">
-            </td>
-            <td width="75%" valign="middle">
-              <a href=https://arxiv.org/pdf/2108.11656.pdf>
-                <papertitle>AR-BERT: Aspect-relation enhanced Aspect-level Sentiment Classification with Multi-modal Explanations </papertitle>
-              </a>
-              <br>
-               <strong>Sk Mainul Islam </strong>, Sourangshu Bhattacharya <br>
-              <em>The Web Conference (<strong>WWW</strong>)</em>, 2022 <br>
-               <p> Aspect level sentiment classification (ALSC) is a difficult problem with state-of-the-art models showing less than 80% macro-F1 score on benchmark datasets. Existing models do not incorporate infor- mation on aspect-aspect relations in knowledge graphs (KGs), e.g. DBpedia. Two main challenges stem from inaccurate disambigua- tion of aspects to KG entities, and the inability to learn aspect representations from the large KGs in joint training with ALSC models. We propose AR-BERT, a novel two-level global-local entity embedding scheme that allows efficient joint training of KG-based aspect embeddings and ALSC models. A novel incorrect disam- biguation detection technique addresses the problem of inaccuracy in aspect disambiguation. We also introduce the problem of deter- mining mode significance in multi-modal explanation generation, and propose a two step solution. The proposed methods show a consistent improvement of 2.5 − 4.1 percentage points, over the recent BERT-based baselines on benchmark datasets. </p>
-              </td>
-          </tr> </tbody></table>
-   
-         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-           <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/bert_lang_2.png" width="160" height="100">
-            </td>
-            <td width="75%" valign="middle">
-              <a href=https://ctrlgenworkshop.github.io/camready/45/CameraReady/Fair_Data_Generation_using_Language_Models_with_Hard_Constraints_Final_Camera_Ready.pdf>
-                <papertitle>Fair Data Generation using Language Models with Hard Constraints</papertitle>
-              </a>
-              <br>
-               <strong>Sk Mainul Islam </strong>, Abhinav Nagpal, Balaji Ganesan, Pranay Kumar Lohia <br>
-              <em>CtrlGen Workshop at NeurIPS (<strong>NeurIPS-W</strong>)</em>, 2021 <br>
-               <p>Natural language text generation has seen significant improvements with the advent
-               of pre-trained language models. Using such language models to predict personal
-               data entities, in place of redacted spans in text, could help generate synthetic
-               datasets. In order to address privacy and ethical concerns with such datasets, we
-               need to ensure that the masked entity predictions are also fair and controlled by
-               application specific constraints. We introduce new ways to inject hard constraints
-               and knowledge into the language models that address such concerns and also
-               improve performance on this task.</p>
-              </td>
-          </tr> </tbody></table>
+  <!-- ── Publications ────────────────────────────── -->
+  <section>
+    <div class="section-label">Selected Publications</div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                Updated on <time datetime="2024-02-09">2024-02-09</time>
-                </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+    <div class="pub">
+      <img class="pub-thumb" src="images/sysarch2.png" alt="AR-BERT architecture diagram">
+      <div>
+        <a class="pub-title" href="https://arxiv.org/pdf/2108.11656.pdf">
+          AR-BERT: Aspect-relation enhanced Aspect-level Sentiment Classification with Multi-modal Explanations
+        </a>
+        <div class="pub-authors"><strong>Sk Mainul Islam</strong>, Sourangshu Bhattacharya</div>
+        <div class="pub-venue">The Web Conference (WWW), 2022</div>
+        <p class="pub-abstract">
+          Proposes a two-level global-local entity embedding scheme for joint training of knowledge-graph-based aspect embeddings and ALSC models, along with a novel incorrect disambiguation detection technique. Achieves a consistent 2.5–4.1 point improvement over BERT-based baselines on benchmark datasets, alongside multi-modal explanation generation.
+        </p>
+        <div class="links-row">
+          <a href="https://arxiv.org/pdf/2108.11656.pdf">PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <img class="pub-thumb" src="images/bert_lang_2.png" alt="Fair data generation diagram">
+      <div>
+        <a class="pub-title" href="https://ctrlgenworkshop.github.io/camready/45/CameraReady/Fair_Data_Generation_using_Language_Models_with_Hard_Constraints_Final_Camera_Ready.pdf">
+          Fair Data Generation using Language Models with Hard Constraints
+        </a>
+        <div class="pub-authors"><strong>Sk Mainul Islam</strong>, Abhinav Nagpal, Balaji Ganesan, Pranay Kumar Lohia</div>
+        <div class="pub-venue">CtrlGen Workshop @ NeurIPS, 2021</div>
+        <p class="pub-abstract">
+          Introduces new methods to inject hard constraints and domain knowledge into pre-trained language models for generating fair and privacy-respecting synthetic text data, addressing ethical concerns in masked entity prediction tasks.
+        </p>
+        <div class="links-row">
+          <a href="https://ctrlgenworkshop.github.io/camready/45/CameraReady/Fair_Data_Generation_using_Language_Models_with_Hard_Constraints_Final_Camera_Ready.pdf">PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────── -->
+  <footer>
+    <p>Updated June 2025 · <a href="mailto:si2307@nyu.edu" style="color:var(--ink-faint);">si2307@nyu.edu</a></p>
+  </footer>
+
 </body>
 </html>
