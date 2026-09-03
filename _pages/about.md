@@ -15,4 +15,6 @@ My research interest in Mechanistic Interpretability focuses on how LLMs encode 
 
 
 ### News
-* 
+* **October 2021:** Our paper on fair and controlled text generation, [Fair Data Generation using Language Models with Hard Constraints](https://ctrlgenworkshop.github.io/camready/45/CameraReady/Fair_Data_Generation_using_Language_Models_with_Hard_Constraints_Final_Camera_Ready.pdf), has been accepted to [CtrlGen Workshop at NeurIPS 2021](https://ctrlgenworkshop.github.io/).
+
+* **March 2021:** Selected as one the mentees at the [Fatima Fellowship](https://fatima.institute/) 2021. 
