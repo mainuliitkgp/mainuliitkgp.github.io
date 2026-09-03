@@ -15,6 +15,9 @@ My research interest in Mechanistic Interpretability focuses on how LLMs encode 
 
 
 ### News
+* **August 2026:** Two papers accepted to the [EMNLP Findings 2026](https://2026.emnlp.org/). 
+* **March 2022:** Selected (with full funding) to attend the [Cornell, Maryland, Max Planck Pre-doctoral School 2022](https://cmmrs2022.mpi-sws.org/). 
+* **October 2021:** Our paper on Aspect Level Sentiment Classification, [AR-BERT: Aspect-relation enhanced Aspect-level Sentiment Classification with Multi-modal Explanations](https://dl.acm.org/doi/pdf/10.1145/3485447.3511941), has been accepted to [CtrlGen Workshop at NeurIPS 2021](https://ctrlgenworkshop.github.io/).
 * **October 2021:** Our paper on fair and controlled text generation, [Fair Data Generation using Language Models with Hard Constraints](https://ctrlgenworkshop.github.io/camready/45/CameraReady/Fair_Data_Generation_using_Language_Models_with_Hard_Constraints_Final_Camera_Ready.pdf), has been accepted to [CtrlGen Workshop at NeurIPS 2021](https://ctrlgenworkshop.github.io/).
 * **August 2021:** Selected as one the mentees at the [ACL Year Round Mentorship program](https://mentorship.aclweb.org/), class of 2022.
 * **March 2021:** Selected as one the mentees at the [Fatima Fellowship](https://fatima.institute/) 2021. 
