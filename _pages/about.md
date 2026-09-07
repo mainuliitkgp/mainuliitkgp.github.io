@@ -29,4 +29,4 @@ My research interest in Mechanistic Interpretability focuses on how LLMs encode 
 * **June 2021:** Completed my internship at [IBM Research India](https://research.ibm.com/labs/india).
 * **March 2021:** Selected as one the mentees at the [Fatima Fellowship](https://fatima.institute/) 2021.
 * **November 2020:** Started working as a Research Intern (GRM Programme, Remote) at [IBM Research India](https://research.ibm.com/labs/india).
-* **January 2018:** Started my MS (Research) at [IIT Kharagpur, India](https://www.iitkgp.ac.in/).
+* **January 2019:** Started my MS (Research) at [IIT Kharagpur, India](https://www.iitkgp.ac.in/).
