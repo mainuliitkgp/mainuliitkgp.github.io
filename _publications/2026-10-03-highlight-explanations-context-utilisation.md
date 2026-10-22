@@ -6,5 +6,5 @@ permalink: /publication/2026-highlight-explanations-context-utilisation
 date: 2026-10-03
 venue: "Computational Linguistics"
 authors: "Jingyi Sun, Pepa Atanasova, Sagnik Ray Choudhury, <strong>Sekh Mainul Islam</strong>, Isabelle Augenstein"
-paperurl: "https://arxiv.org/abs/2510.02629"
+paperurl: "https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.621/136361/Evaluation-Framework-for-Highlight-Explanations-of"
 ---
